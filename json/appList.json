@@ -1,0 +1,34 @@
+{
+	"apps":[
+		{
+			"name": "calculator",
+			"description": "A simple calculator application",
+			"type": "utility"
+		},
+		{
+			"name": "contacts",
+			"description": "A simple contacts application",
+			"type": "social"
+		},
+		{
+			"name": "expenseManager",
+			"description": "A simple expense manager application",
+			"type": "utility"
+		},
+		{
+			"name": "musicPlayer",
+			"description": "A simple music player application",
+			"type": "entertainment"
+		},
+		{
+			"name": "todoList",
+			"description": "A simple to-do application",
+			"type": "utility"
+		},
+		{
+			"name": "weather",
+			"description": "A simple weather application",
+			"type": "utility"
+		}
+	]
+}

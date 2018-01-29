@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myModule" ng-controller="myController">
+<head>
+	<title>GuestPage</title>
+	<link rel="stylesheet" type="text/css" href="css/homescreen.css">
+	<link rel="stylesheet" type="text/css" href="css/timeline.css">
+	<link rel="stylesheet" type="text/css" href="css/contactChip.css">
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/homescreenAngular.js"></script>
+</head>
+<body> 
+	<div class="timeline">
+		<div class="container {{ ::timelineSide }}" ng-repeat="openApp in openApps" id="{{::openApp}}">
+			<div class="content">
+				<h2>{{ openApp }}</h2>
+			</div>
+		</div>
+	</div>
+	<div class="chip">
+		<img src="images/img_avatar.png" alt="Person" width="96" height="96">
+		Guest
+	</div>
+	<div id="systemUI">
+		<div id="dateTime">
+			DateTime
+		</div>
+	</div>
+	<div id="currentApp">
+		{{ currentApp }}
+	</div>
+	<br/>
+	<div id="appDrawer">
+		<div>
+			<input id="searchBar" type="text" placeholder="Search for apps, web" ng-model="searchQuery"/>
+		</div>
+		<div id="searchResult">
+			<div class="searchedApp" ng-repeat="app in apps | filter: searchQuery">
+				<div class="chip" ng-click="openApplication(app.name)">
+					<img id="{{app.name}}" ng-src="appIcons/{{app.name}}.png" alt="{{app.name}}" width="96" height="96">
+					{{ app.name }}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
